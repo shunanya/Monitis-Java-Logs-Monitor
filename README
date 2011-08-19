@@ -42,7 +42,7 @@ The project contain the following code
     src				Folder that contain the source codes for Log Monitor
 
   log_simulator			The monitored application simulator (sample - used for testing purpose only)
-    bin
+    distr
       logsim.jar		Compiled sample application
       log4j.xml			Typical sample configuration for monitored application
       *.jar			libraries for sample application
