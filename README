@@ -26,4 +26,39 @@ So, the cooperation of monitored application and log monitor can be depicted as 
       -------------         -------------  
                    filtered
                   log records
-The project contain the following code
+
+The project contain the following code 
+(the separated lib folder wasn't commited to avoid duplication)
+
+  log_mon			Log Monitor project folder
+    distr		
+      log_mon.jar		Compiled Log Monitor JAR file
+      log4j.xml			Configuration for Logging engine
+      *.jar			libraries for Log Monitor
+    properties			
+      logmonitor.properties	Properties file for Log Monitor
+    src				Folder that contain the source codes for Log Monitor
+
+  log_simulator			The monitored application simulator (sample - used for testing purpose only)
+    bin
+      logsim.jar		Compiled sample application
+      log4j.xml			Typical sample configuration for monitored application
+      *.jar			libraries for sample application
+    src				Folder that contain the source codes for sample application
+
+The Monitored application and Log Monitor can be started in arbitrary sequence because any 
+of mentioned applications will do just his own work until there isn't yet connection one 
+to other and periodically try to establish the connection.
+Please note that before checking of workability of the monitor, replace  the existing values 
+in the 'logmonitor.properties' by your own desired values.
+
+Thus, in Linux machine you can run e.g. like the following (or in reverse order)
+
+    cd /home/log_simulator/bin
+    java - jar logsim.jar &
+
+    cd /home/log_mon/distr
+    java -jar log_mon.jar &
+
+We suppose here that projects are located in the 'home' folder.
+
