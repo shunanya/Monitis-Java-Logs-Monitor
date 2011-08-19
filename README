@@ -46,6 +46,8 @@ The project contain the following code
       *.jar			libraries for sample application
     src				Folder that contain the source codes for sample application
 
+Please notice that we are using in this project the cropped Open API Java library (custom monitor strongly needed functionality have been kept only) 
+
 The Monitored application and Log Monitor can be started in arbitrary sequence because any 
 of mentioned applications will do just his own work until there isn't yet connection one 
 to other and periodically try to establish the connection.
