@@ -1,4 +1,6 @@
-This project presents the custom monitor that provide remotely monitoring Java logs based on Monitis Open API. 
+This project presents the custom monitor that provide remotely monitoring Java logs based on Monitis Open API 
+and by using approach described in https://github.com/shunanya/Monitis-Java-Plugins. 
+
 The Java logs monitor works as separate Application to avoiding of  inadmissible affects and side effects onto the monitored application.
 Besides, the Java Logs Monitor is fully implemented  on Java to get platform independence like monitored application.
 Requirements for monitored application is the following
