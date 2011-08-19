@@ -15,10 +15,21 @@ Requirements for monitored application is the following
 		<param name="ReconnectionDelay" value="10000" />
 		<param name="Threshold" value="ALL" />
 		<filter class="org.monitis.logmonitor.logger.MonitisFilter">
-			<param name="filterPattern" value="(Error|Fatal|Warn*|Attention)" />
+			<param name="filterPattern" value="(Error|Fatal|Warn*|Attention)" />	Pattern-string for selection of log records that you want to monitor
 			<param name="minAllowedLevel" value="WARN" />
 		</filter>
 	</appender>
+
+where
+ - "Port" is the port number that listen Log Monitored
+ - "RemoteHost" is the host where located the Log Monitor
+ - "ReconnectionDelay" i sthe time interval to try establish connection
+ - "Threshold" is the log records level that will be given to monitisAppender for analysis
+ - "filterPattern" is a pattern-string for selection of log records that you want to monitor
+    (default is no any pattern - so all records will be sent to Log Monitor)
+ - "minAllowedLevel" is the log records level (ERROR, WARN, DEBUG, etc.) that you want to monitor
+    (default value is WARN)
+
 Note that usage of SocketAppender gave us, in addition, a possibility to be wholly free of what other appenders uses monitored application because log records will be received directly from Logging system but not through a log file or some other secondary  sources.
 So, the cooperation of monitored application and log monitor can be depicted as the following rough diagram
       -------------         -------------
