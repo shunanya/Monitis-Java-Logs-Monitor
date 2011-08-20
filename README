@@ -22,7 +22,7 @@ Requirements for monitored application is the following
 
 where
  - "Port" is the port number that listen Log Monitor
- - "RemoteHost" is the host where the Log Monitor is located
+ - "RemoteHost" is the host machine IP where the Log Monitor is located
  - "ReconnectionDelay" is the time interval to periodically try to establish connection to the Log Monitor
  - "Threshold" is the log records level that will be given to monitisAppender for analysis
  - "filterPattern" is a pattern-string for selection of log records that you want to monitor

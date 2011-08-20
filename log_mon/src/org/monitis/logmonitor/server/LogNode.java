@@ -19,6 +19,15 @@ public class LogNode extends Thread {
 	private ObjectInputStream ois;
     private Logger logger =Logger.getLogger("log_node");
 
+	/**
+	 * Formal constructor
+	 * 
+	 * @param socket
+	 *            listen binded socket
+	 * @param writer
+	 *            LogWriter class that should accumulate filtered log records
+	 * @throws Exception
+	 */
 	public LogNode(Socket socket, LogWriter writer) throws Exception {
 		this.socket = socket;
 		this.writer = writer;

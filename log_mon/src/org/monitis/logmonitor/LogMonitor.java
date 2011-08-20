@@ -182,6 +182,15 @@ public class LogMonitor extends  IGenericCustomMonitor {
 		return delete_Monitor;
 	}
 
+	/* (non-Javadoc)
+	 * @see org.monitis.GenericCustomMonitor.IGenericCustomMonitor#signal_testEnded(int)
+	 */
+	@Override
+	public void signal_testEnded(int err_code) {
+		super.signal_testEnded(err_code);
+		System.exit(err_code);
+	}
+
 	public LogWriter getWriter(){
 		LogWriter ret = logWriter;
 		if (ret == null){
